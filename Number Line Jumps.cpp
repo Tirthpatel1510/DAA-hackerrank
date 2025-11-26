@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+string kangaroo(int x1, int v1, int x2, int v2) {
+    if (v1 <= v2) {
+        return "NO";
+    }
+    int diffX = x2 - x1;
+    int diffV = v1 - v2;
+    if (diffX % diffV == 0) {
+        return "YES";
+    } else {
+        return "NO";
+    }
+}
+
+int main() {
+    int x1, v1, x2, v2;
+    cin >> x1 >> v1 >> x2 >> v2;
+    cout << kangaroo(x1, v1, x2, v2);
+    return 0;
+}
